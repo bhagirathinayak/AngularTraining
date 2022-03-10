@@ -1,1 +1,20 @@
-Content area...
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="User Full Name" 
+            [(ngModel)]="demoData.fullName" name="Username">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="demoData.address" name="UserAddress"></textarea>
+        </div>
+        <div class="mb-3">
+            <p>First name value: {{ demoData.fullName }}</p>
+    <p>First name valid: {{ demoData.address }}</p>
+    <p>Form value: {{ f.value | json }}</p>
+            <button>Submit</button>
+        </div>
+    </form>
+    
+</div>

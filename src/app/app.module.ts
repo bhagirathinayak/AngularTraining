@@ -7,6 +7,8 @@ import { HomePageComponent } from './custom/home-page/home-page.component';
 import { HeaderComponent } from './custom/header/header.component';
 import { NavBarComponent } from './custom/nav-bar/nav-bar.component';
 import { ContentAreaComponent } from './custom/content-area/content-area.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,13 @@ import { ContentAreaComponent } from './custom/content-area/content-area.compone
     HeaderComponent,
     NavBarComponent,
     ContentAreaComponent
+     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
